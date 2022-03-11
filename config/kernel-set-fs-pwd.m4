@@ -10,6 +10,7 @@ AC_DEFUN([SPL_AC_SET_FS_PWD_WITH_CONST],
 		#include <linux/spinlock.h>
 		#include <linux/fs_struct.h>
 		#include <linux/path.h>
+		void set_fs_pwd(struct fs_struct *f, const struct path *p) {}
 		void (*const set_fs_pwd_func)
 			(struct fs_struct *, const struct path *)
 			= set_fs_pwd;
